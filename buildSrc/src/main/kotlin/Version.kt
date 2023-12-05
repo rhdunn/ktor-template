@@ -47,5 +47,12 @@ object Version {
          * `SPDX-License-Identifier: Apache-2.0`
          */
         const val KotlinTest = Kotlin
+
+        /**
+         * The version of the `ch.qos.logback:logback-classic` dependency.
+         *
+         * `SPDX-License-Identifier: EPL-1.0`
+         */
+        const val LogbackClassic = "1.4.11"
     }
 }
