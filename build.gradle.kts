@@ -5,6 +5,7 @@ plugins {
     id("io.ktor.plugin") version Version.Plugin.Ktor
 }
 
+group = ProjectMetadata.GitHub.GroupId
 version = ProjectMetadata.Build.Version
 
 repositories {
