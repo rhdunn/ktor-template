@@ -5,6 +5,8 @@ plugins {
     id("io.ktor.plugin") version Version.Plugin.Ktor
 }
 
+version = ProjectMetadata.Build.Version
+
 repositories {
     mavenCentral()
 }
