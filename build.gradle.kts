@@ -21,5 +21,5 @@ dependencies {
     implementation("io.ktor:ktor-server-netty-jvm")
 
     testImplementation("io.ktor:ktor-server-tests-jvm")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:${Version.Kotlin}")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:${Version.Dependency.KotlinTest}")
 }
