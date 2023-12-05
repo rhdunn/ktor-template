@@ -2,6 +2,7 @@
 
 plugins {
     kotlin("jvm") version Version.Plugin.KotlinJvm
+    id("io.ktor.plugin") version Version.Plugin.Ktor
 }
 
 repositories {

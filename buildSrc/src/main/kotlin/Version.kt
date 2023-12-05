@@ -19,6 +19,15 @@ object Version {
      */
     object Plugin {
         /**
+         * The version of the `id("io.ktor.plugin")` plugin.
+         *
+         * `SPDX-License-Identifier: Apache-2.0`
+         *
+         * @see <a href="https://github.com/ktorio/ktor">https://github.com/ktorio/ktor</a>
+         */
+        const val Ktor = "2.3.6"
+
+        /**
          * The version of the `kotlin("jvm")` plugin.
          *
          * `SPDX-License-Identifier: Apache-2.0`
