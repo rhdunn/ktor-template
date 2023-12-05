@@ -11,3 +11,7 @@ version = ProjectMetadata.Build.Version
 repositories {
     mavenCentral()
 }
+
+application {
+    mainClass.set("ApplicationKt")
+}
