@@ -7,5 +7,5 @@ gradlew
 gradlew.bat
 
 # Gradle Output
-/.gradle/
+.gradle/
 build/
