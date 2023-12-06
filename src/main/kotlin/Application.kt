@@ -3,6 +3,7 @@
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
 import io.ktor.server.html.*
+import io.ktor.server.http.content.*
 import io.ktor.server.netty.*
 import io.ktor.server.routing.*
 import io.ktor.util.pipeline.*
@@ -16,12 +17,14 @@ fun main() {
 fun Application.module() {
     routing {
         get("/") { index() }
+        staticResources("/css", "assets.css")
     }
 }
 
 suspend fun PipelineContext<Unit, ApplicationCall>.index() = call.respondHtml {
     head {
         title { +"Ktor template" }
+        link(rel = "stylesheet", href = "/css/default.css")
     }
     body {
         p { +"Ktor template" }
