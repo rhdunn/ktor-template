@@ -19,6 +19,7 @@ application {
 dependencies {
     implementation("io.ktor:ktor-server-core-jvm")
     implementation("io.ktor:ktor-server-netty-jvm")
+    implementation("io.ktor:ktor-server-html-builder")
 
     implementation("ch.qos.logback:logback-classic:${Version.Dependency.LogbackClassic}")
 
