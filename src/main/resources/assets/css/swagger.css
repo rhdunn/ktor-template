@@ -3,3 +3,6 @@ body { margin: 0; }
 
 p:first-child { margin-top: 0 !important; }
 p:last-child { margin-bottom: 0 !important; }
+
+.swagger-ui div.info { margin: 20px 0; }
+.swagger-ui div.scheme-container { padding-top: 0; }
