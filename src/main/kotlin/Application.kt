@@ -19,7 +19,9 @@ fun Application.module() {
     routing {
         get("/") { index() }
         staticResources("/css", "assets.css")
-        swaggerUI(path = "swagger", swaggerFile = "openapi/documentation.yaml")
+        swaggerUI(path = "swagger", swaggerFile = "openapi/documentation.yaml") {
+            customStyle("/css/swagger.css")
+        }
     }
 }
 
