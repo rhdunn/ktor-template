@@ -1,2 +1,5 @@
 /* Fix the margins */
 body { margin: 0; }
+
+p:first-child { margin-top: 0 !important; }
+p:last-child { margin-bottom: 0 !important; }
