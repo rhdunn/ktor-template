@@ -5,6 +5,7 @@ import io.ktor.server.engine.*
 import io.ktor.server.html.*
 import io.ktor.server.http.content.*
 import io.ktor.server.netty.*
+import io.ktor.server.plugins.swagger.*
 import io.ktor.server.routing.*
 import io.ktor.util.pipeline.*
 import kotlinx.html.*
@@ -18,6 +19,7 @@ fun Application.module() {
     routing {
         get("/") { index() }
         staticResources("/css", "assets.css")
+        swaggerUI(path = "swagger", swaggerFile = "openapi/documentation.yaml")
     }
 }
 
