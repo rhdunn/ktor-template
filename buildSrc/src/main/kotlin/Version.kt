@@ -54,5 +54,12 @@ object Version {
          * `SPDX-License-Identifier: EPL-1.0`
          */
         const val LogbackClassic = "1.4.11"
+
+        /**
+         * The version of the `swagger-ui` package.
+         *
+         * `SPDX-License-Identifier: Apache-2.0`
+         */
+        const val SwaggerUI = "5.10.3"
     }
 }

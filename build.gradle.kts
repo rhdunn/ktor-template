@@ -20,10 +20,11 @@ dependencies {
     implementation("io.ktor:ktor-server-core-jvm")
     implementation("io.ktor:ktor-server-html-builder")
     implementation("io.ktor:ktor-server-netty-jvm")
-    implementation("io.ktor:ktor-server-swagger")
     implementation("io.ktor:ktor-server-webjars")
 
     implementation("ch.qos.logback:logback-classic:${Version.Dependency.LogbackClassic}")
+
+    implementation("org.webjars:swagger-ui:${Version.Dependency.SwaggerUI}")
 
     testImplementation("io.ktor:ktor-server-tests-jvm")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:${Version.Dependency.KotlinTest}")

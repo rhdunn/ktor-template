@@ -1,11 +1,11 @@
-// Copyright (C) 2023 Reece H. Dunn. SPDX-License-Identifier: Apache-2.0
+// Copyright (C) 2023-2024 Reece H. Dunn. SPDX-License-Identifier: Apache-2.0
 
+import io.github.rhdunn.ktor.swagger.swaggerUI
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
 import io.ktor.server.html.*
 import io.ktor.server.http.content.*
 import io.ktor.server.netty.*
-import io.ktor.server.plugins.swagger.*
 import io.ktor.server.routing.*
 import io.ktor.server.webjars.*
 import io.ktor.util.pipeline.*
@@ -24,9 +24,7 @@ fun Application.module() {
     routing {
         get("/") { index() }
         staticResources("/css", "assets.css")
-        swaggerUI(path = "swagger", swaggerFile = "openapi/documentation.yaml") {
-            customStyle("/css/swagger.css")
-        }
+        swaggerUI(path = "swagger", swaggerFile = "openapi/documentation.yaml")
     }
 }
 
