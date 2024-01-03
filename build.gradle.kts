@@ -21,6 +21,7 @@ dependencies {
     implementation("io.ktor:ktor-server-html-builder")
     implementation("io.ktor:ktor-server-netty-jvm")
     implementation("io.ktor:ktor-server-swagger")
+    implementation("io.ktor:ktor-server-webjars")
 
     implementation("ch.qos.logback:logback-classic:${Version.Dependency.LogbackClassic}")
 

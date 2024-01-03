@@ -7,6 +7,7 @@ import io.ktor.server.http.content.*
 import io.ktor.server.netty.*
 import io.ktor.server.plugins.swagger.*
 import io.ktor.server.routing.*
+import io.ktor.server.webjars.*
 import io.ktor.util.pipeline.*
 import kotlinx.html.*
 
@@ -16,6 +17,10 @@ fun main() {
 }
 
 fun Application.module() {
+    install(Webjars) {
+        path = "/modules"
+    }
+
     routing {
         get("/") { index() }
         staticResources("/css", "assets.css")
