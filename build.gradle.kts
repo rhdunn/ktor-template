@@ -3,6 +3,7 @@
 plugins {
     kotlin("jvm") version Version.Plugin.KotlinJvm
     id("io.ktor.plugin") version Version.Plugin.Ktor
+    id("org.flywaydb.flyway") version Version.Plugin.Flyway
 }
 
 group = ProjectMetadata.GitHub.GroupId

@@ -6,6 +6,9 @@
 
 ## Requirements
 
+Java 17
+: Running the gradle build, compiling and running the project.
+
 PostgreSQL
 : The database to store the data.
 

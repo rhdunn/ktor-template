@@ -35,6 +35,15 @@ object Version {
          * @see <a href="https://github.com/JetBrains/kotlin/tree/master/libraries/tools/kotlin-gradle-plugin">https://github.com/JetBrains/kotlin/tree/master/libraries/tools/kotlin-gradle-plugin</a>
          */
         const val KotlinJvm = Kotlin
+
+        /**
+         * The version of the `id("org.flywaydb.flyway")` plugin.
+         *
+         * `SPDX-License-Identifier: Apache-2.0`
+         *
+         * @see <a href="https://github.com/flyway/flywy">https://github.com/flyway/flyway</a>
+         */
+        const val Flyway = "10.10.0"
     }
 
     /**
