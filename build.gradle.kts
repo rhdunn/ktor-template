@@ -1,4 +1,4 @@
-// Copyright (C) 2023 Reece H. Dunn. SPDX-License-Identifier: Apache-2.0
+// Copyright (C) 2023-2024 Reece H. Dunn. SPDX-License-Identifier: Apache-2.0
 
 plugins {
     kotlin("jvm") version Version.Plugin.KotlinJvm
@@ -25,6 +25,8 @@ dependencies {
     implementation("ch.qos.logback:logback-classic:${Version.Dependency.LogbackClassic}")
 
     implementation("org.webjars:swagger-ui:${Version.Dependency.SwaggerUI}")
+
+    implementation("org.postgresql:postgresql:${Version.Dependency.PostgresJdbcDriver}")
 
     testImplementation("io.ktor:ktor-server-tests-jvm")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:${Version.Dependency.KotlinTest}")

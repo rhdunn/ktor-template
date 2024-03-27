@@ -4,7 +4,12 @@
 > NOTE: This readme should be edited to describe your project, removing the
 > text describing the content of this template.
 
+## Requirements
+
+PostgreSQL
+: The database to store the data.
+
 ## License
-Copyright (C) 2023 Reece H. Dunn
+Copyright (C) 2023-2024 Reece H. Dunn
 
 SPDX-License-Identifier: [Apache-2.0](LICENSE)

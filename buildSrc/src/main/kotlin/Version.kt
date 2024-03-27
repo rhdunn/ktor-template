@@ -56,6 +56,13 @@ object Version {
         const val LogbackClassic = "1.4.11"
 
         /**
+         * The version of the `org:postgresql:postgresql` package.
+         *
+         * `SPDX-License-Identifier: BSD-2`
+         */
+        const val PostgresJdbcDriver = "42.7.3"
+
+        /**
          * The version of the `swagger-ui` package.
          *
          * `SPDX-License-Identifier: Apache-2.0`
