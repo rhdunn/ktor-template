@@ -6,6 +6,12 @@ plugins {
     id("org.flywaydb.flyway") version Version.Plugin.Flyway
 }
 
+buildscript {
+    dependencies {
+        classpath("org.flywaydb:flyway-database-postgresql:${Version.Plugin.Flyway}")
+    }
+}
+
 group = ProjectMetadata.GitHub.GroupId
 version = ProjectMetadata.Build.Version
 
@@ -15,6 +21,12 @@ repositories {
 
 application {
     mainClass.set("ApplicationKt")
+}
+
+flyway {
+    url = BuildConfiguration.getDatabaseUrl(project)
+    user = BuildConfiguration.getDatabaseUsername(project)
+    password = BuildConfiguration.getDatabasePassword(project)
 }
 
 dependencies {
