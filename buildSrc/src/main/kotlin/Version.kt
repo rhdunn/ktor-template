@@ -51,6 +51,13 @@ object Version {
      */
     object Dependency {
         /**
+         * The version of the `org.jetbrains.exposed` package.
+         *
+         * `SPDX-License-Identifier: BSD-2`
+         */
+        const val Exposed = "0.48.0"
+
+        /**
          * The version of the `htmx` package.
          *
          * `SPDX-License-Identifier: Apache-2.0`
