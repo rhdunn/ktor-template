@@ -29,6 +29,9 @@ flyway {
     password = BuildConfiguration.getDatabasePassword(project)
 }
 
+// Run any database migrations before running the web server.
+tasks.getByName("run").dependsOn(tasks.getByName("flywayMigrate"))
+
 dependencies {
     implementation("io.ktor:ktor-server-core-jvm")
     implementation("io.ktor:ktor-server-html-builder")
