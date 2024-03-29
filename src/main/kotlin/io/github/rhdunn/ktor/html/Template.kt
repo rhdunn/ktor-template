@@ -11,6 +11,7 @@ suspend fun ApplicationCall.respondHtmlTemplate(body: MAIN.() -> Unit) = respond
     head {
         title { +APPLICATION_TITLE }
         link(rel = "stylesheet", href = "/css/default.css")
+        script(src = "/modules/htmx.org/htmx.min.js") {}
     }
     body {
         header {
