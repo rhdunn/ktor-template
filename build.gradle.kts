@@ -13,7 +13,7 @@ repositories {
 }
 
 application {
-    mainClass.set("ApplicationKt")
+    mainClass.set("io.ktor.server.netty.EngineMain")
 }
 
 dependencies {
