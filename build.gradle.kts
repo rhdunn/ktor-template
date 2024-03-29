@@ -25,6 +25,8 @@ dependencies {
     implementation("ch.qos.logback:logback-classic:${Version.Dependency.LogbackClassic}")
 
     implementation("org.webjars:bootstrap:${Version.Dependency.Bootstrap}")
+    implementation("org.webjars.npm:bootstrap-icons:${Version.Dependency.BootstrapIcons}")
+
     implementation("org.webjars.npm:htmx.org:${Version.Dependency.HTMX}")
     implementation("org.webjars:swagger-ui:${Version.Dependency.SwaggerUI}")
 

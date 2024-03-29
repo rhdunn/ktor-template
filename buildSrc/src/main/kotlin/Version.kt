@@ -49,6 +49,13 @@ object Version {
         const val Bootstrap = "5.3.3"
 
         /**
+         * The version of the `bootstrap-icons` package.
+         *
+         * `SPDX-License-Identifier: MIT`
+         */
+        const val BootstrapIcons = "1.11.3"
+
+        /**
          * The version of the `htmx` package.
          *
          * `SPDX-License-Identifier: Apache-2.0`

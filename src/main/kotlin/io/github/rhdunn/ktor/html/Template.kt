@@ -12,6 +12,7 @@ suspend fun ApplicationCall.respondHtmlTemplate(body: MAIN.() -> Unit) = respond
         title { +APPLICATION_TITLE }
         link(rel = "stylesheet", href = "/css/default.css")
         link(rel = "stylesheet", href = "/modules/bootstrap/css/bootstrap.min.css")
+        link(rel = "stylesheet", href = "/modules/bootstrap-icons/font/bootstrap-icons.min.css")
         script(src = "/modules/htmx.org/htmx.min.js") {}
     }
     body {
