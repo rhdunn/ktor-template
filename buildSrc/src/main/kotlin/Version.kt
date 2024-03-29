@@ -42,6 +42,13 @@ object Version {
      */
     object Dependency {
         /**
+         * The version of the `bootstrap` package.
+         *
+         * `SPDX-License-Identifier: Apache-2.0, MIT`
+         */
+        const val Bootstrap = "5.3.3"
+
+        /**
          * The version of the `htmx` package.
          *
          * `SPDX-License-Identifier: Apache-2.0`
