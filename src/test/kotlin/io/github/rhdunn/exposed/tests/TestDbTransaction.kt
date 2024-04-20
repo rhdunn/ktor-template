@@ -6,6 +6,13 @@ import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.Table
 import org.jetbrains.exposed.sql.transactions.transaction
+import java.sql.Connection
+
+// The H2 in-memory database is destroyed when a connection is closed, so only
+// make the outermost connection closable.
+private class InMemoryConnection(connection: Connection) : Connection by connection {
+    override fun close() {}
+}
 
 interface TestDbTransaction {
     val tables: Array<Table>
@@ -13,11 +20,8 @@ interface TestDbTransaction {
     fun withMemoryDatabase(block: Database.() -> Unit) {
         val source = JdbcDataSource()
         source.setUrl("jdbc:h2:mem:;DATABASE_TO_LOWER=TRUE")
-
-        // Keep a connection open for the duration of the test so that H2 does
-        // not delete the in-memory database.
         source.connection.use {
-            val database = Database.connect(source)
+            val database = Database.connect(getNewConnection = { InMemoryConnection(it) })
             transaction(database) {
                 SchemaUtils.create(*tables)
             }
