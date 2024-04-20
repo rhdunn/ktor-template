@@ -72,6 +72,13 @@ object Version {
         const val KotlinTest = Kotlin
 
         /**
+         * The version of the `com.h2database:h2` package.
+         *
+         * `SPDX-License-Identifier: BSD-2`
+         */
+        const val H2JdbcDriver = "2.2.224"
+
+        /**
          * The version of the `ch.qos.logback:logback-classic` dependency.
          *
          * `SPDX-License-Identifier: EPL-1.0`
@@ -79,7 +86,7 @@ object Version {
         const val LogbackClassic = "1.4.11"
 
         /**
-         * The version of the `org:postgresql:postgresql` package.
+         * The version of the `org.postgresql:postgresql` package.
          *
          * `SPDX-License-Identifier: BSD-2`
          */

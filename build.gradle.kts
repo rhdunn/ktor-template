@@ -44,6 +44,7 @@ dependencies {
     implementation("org.webjars:swagger-ui:${Version.Dependency.SwaggerUI}")
 
     implementation("org.postgresql:postgresql:${Version.Dependency.PostgresJdbcDriver}")
+    testImplementation("com.h2database:h2:${Version.Dependency.H2JdbcDriver}")
 
     implementation("org.jetbrains.exposed:exposed-core:${Version.Dependency.Exposed}")
     implementation("org.jetbrains.exposed:exposed-crypt:${Version.Dependency.Exposed}")
