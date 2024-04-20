@@ -10,7 +10,7 @@ import org.jetbrains.exposed.sql.transactions.transaction
 interface TestDbTransaction {
     val tables: Array<Table>
 
-    fun transaction(block: () -> Unit) {
+    fun withMemoryDatabase(block: Database.() -> Unit) {
         val source = JdbcDataSource()
         source.setUrl("jdbc:h2:mem:;DATABASE_TO_LOWER=TRUE")
 
@@ -20,8 +20,14 @@ interface TestDbTransaction {
             val database = Database.connect(source)
             transaction(database) {
                 SchemaUtils.create(*tables)
-                block()
             }
+            database.block()
+        }
+    }
+
+    fun transaction(block: () -> Unit) = withMemoryDatabase {
+        transaction(this) {
+            block()
         }
     }
 }
