@@ -19,7 +19,7 @@ interface TestDbTransaction {
 
     fun withMemoryDatabase(block: Database.() -> Unit) {
         val source = JdbcDataSource()
-        source.setUrl("jdbc:h2:mem:;DATABASE_TO_LOWER=TRUE")
+        source.setUrl("jdbc:h2:mem:;DATABASE_TO_LOWER=TRUE;MODE=POSTGRESQL")
         source.connection.use {
             val database = Database.connect(getNewConnection = { InMemoryConnection(it) })
             transaction(database) {
