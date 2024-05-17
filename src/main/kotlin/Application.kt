@@ -1,6 +1,6 @@
 // Copyright (C) 2023-2024 Reece H. Dunn. SPDX-License-Identifier: Apache-2.0
 
-import io.github.rhdunn.ktor.application.connectionPoolDataSource
+import io.github.rhdunn.ktor.application.dataSource
 import io.github.rhdunn.ktor.html.respondHtmlTemplate
 import io.github.rhdunn.ktor.swagger.swaggerUI
 import io.ktor.server.application.*
@@ -12,7 +12,7 @@ import kotlinx.html.*
 import org.jetbrains.exposed.sql.Database
 
 fun Application.module() {
-    Database.connectPool(connectionPoolDataSource)
+    Database.connect(dataSource)
 
     install(Webjars) {
         path = "/modules"
