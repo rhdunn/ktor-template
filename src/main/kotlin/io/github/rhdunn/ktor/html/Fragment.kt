@@ -6,9 +6,12 @@ import io.ktor.server.application.*
 import io.ktor.server.response.*
 import kotlinx.html.TagConsumer
 import kotlinx.html.stream.createHTML
+import org.jetbrains.exposed.sql.transactions.experimental.newSuspendedTransaction
 
-suspend fun ApplicationCall.respondHtmlFragment(content: TagConsumer<String>.() -> Unit) {
+suspend fun ApplicationCall.respondHtmlFragment(content: suspend TagConsumer<String>.() -> Unit) {
     val html = createHTML()
-    html.content()
+    newSuspendedTransaction {
+        html.content()
+    }
     respondText(text = html.finalize(), ContentType.Text.Html)
 }
