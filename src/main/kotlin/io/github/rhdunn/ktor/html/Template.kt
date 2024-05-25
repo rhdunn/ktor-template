@@ -7,7 +7,10 @@ import kotlinx.html.*
 
 const val APPLICATION_TITLE = "Ktor Template"
 
-suspend fun ApplicationCall.respondHtmlTemplate(body: MAIN.() -> Unit) = respondHtml {
+suspend fun ApplicationCall.respondHtmlTemplate(
+    classes: String? = "p-2",
+    body: MAIN.() -> Unit
+) = respondHtml {
     head {
         title { +APPLICATION_TITLE }
         link(rel = "stylesheet", href = "/css/default.css")
@@ -21,7 +24,7 @@ suspend fun ApplicationCall.respondHtmlTemplate(body: MAIN.() -> Unit) = respond
                 a(classes = "navbar-brand", href = "/") { +APPLICATION_TITLE }
             }
         }
-        main("p-2") {
+        main(classes) {
             this.body()
         }
         script(src = "/modules/bootstrap/js/bootstrap.bundle.min.js") {}
