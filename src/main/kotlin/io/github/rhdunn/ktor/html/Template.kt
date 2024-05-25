@@ -24,8 +24,12 @@ suspend fun ApplicationCall.respondHtmlTemplate(
                 a(classes = "navbar-brand", href = "/") { +APPLICATION_TITLE }
             }
         }
-        main(classes) {
-            this.body()
+        div("flex-grow-1 d-flex") {
+            sidebar {
+            }
+            main("flex-grow-1 $classes") {
+                this.body()
+            }
         }
         script(src = "/modules/bootstrap/js/bootstrap.bundle.min.js") {}
         div(classes = "modal modal-blur fade") {
