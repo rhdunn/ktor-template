@@ -25,5 +25,15 @@ suspend fun ApplicationCall.respondHtmlTemplate(body: MAIN.() -> Unit) = respond
             this.body()
         }
         script(src = "/modules/bootstrap/js/bootstrap.bundle.min.js") {}
+        div(classes = "modal modal-blur fade") {
+            id = "modal-target"
+            attributes["style"] = "display: none;"
+            attributes["aria-hidden"] = "false"
+            tabIndex = "-1"
+            div(classes = "modal-dialog modal-lg modal-dialog-centered") {
+                role = "document"
+                div(classes = "modal-content")
+            }
+        }
     }
 }
