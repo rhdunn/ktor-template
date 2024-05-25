@@ -9,7 +9,10 @@ import org.jetbrains.exposed.sql.transactions.experimental.newSuspendedTransacti
 
 const val APPLICATION_TITLE = "Ktor Template"
 
-suspend fun ApplicationCall.respondHtmlTemplate(body: suspend MAIN.() -> Unit) = respondHtml {
+suspend fun ApplicationCall.respondHtmlTemplate(
+    classes: String? = "p-2",
+    body: suspend MAIN.() -> Unit
+) = respondHtml {
     head {
         title { +APPLICATION_TITLE }
         link(rel = "stylesheet", href = "/css/default.css")
@@ -23,10 +26,14 @@ suspend fun ApplicationCall.respondHtmlTemplate(body: suspend MAIN.() -> Unit) =
                 a(classes = "navbar-brand", href = "/") { +APPLICATION_TITLE }
             }
         }
-        main("p-2") {
-            runBlocking {
-                newSuspendedTransaction {
-                    this@main.body()
+        div("flex-grow-1 d-flex") {
+            sidebar {
+            }
+            main("flex-grow-1 $classes") {
+                runBlocking {
+                    newSuspendedTransaction {
+                        this@main.body()
+                    }
                 }
             }
         }
