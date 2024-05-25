@@ -7,7 +7,7 @@ import java.sql.ResultSet
 import kotlin.reflect.KClass
 
 abstract class WrappedColumnType<T : Any, BaseT>(
-    private val baseType: ColumnType<BaseT>,
+    protected val baseType: ColumnType<BaseT>,
     private val klass: KClass<*>
 ) : ColumnType<T>() {
     abstract override fun valueFromDB(value: Any): T
