@@ -47,6 +47,12 @@ dependencies {
     implementation("org.webjars:swagger-ui:${Version.Dependency.SwaggerUI}")
 
     implementation("org.postgresql:postgresql:${Version.Dependency.PostgresJdbcDriver}")
+    testImplementation("com.h2database:h2:${Version.Dependency.H2JdbcDriver}")
+
+    implementation("org.jetbrains.exposed:exposed-core:${Version.Dependency.Exposed}")
+    implementation("org.jetbrains.exposed:exposed-crypt:${Version.Dependency.Exposed}")
+    implementation("org.jetbrains.exposed:exposed-dao:${Version.Dependency.Exposed}")
+    implementation("org.jetbrains.exposed:exposed-jdbc:${Version.Dependency.Exposed}")
 
     testImplementation("io.ktor:ktor-server-tests-jvm")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:${Version.Dependency.KotlinTest}")
