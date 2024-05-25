@@ -1,3 +1,4 @@
-/* fonts */
 html { font-size: 0.875rem; font-family: Calibri, "Liberation Sans", "Roboto", sans-serif; }
 code, pre, tt, kbd, samp { font-family: Consolas, "Liberation Mono", "Roboto Mono", monospace; }
+
+.navbar { border-bottom: 1px solid #dddddd; height: 50px; }

@@ -16,10 +16,12 @@ suspend fun ApplicationCall.respondHtmlTemplate(body: MAIN.() -> Unit) = respond
         script(src = "/modules/htmx.org/htmx.min.js") {}
     }
     body {
-        header {
-            h1 { +APPLICATION_TITLE }
+        nav("navbar navbar-expand-lg bg-body-tertiary") {
+            div("container-fluid") {
+                a(classes = "navbar-brand", href = "/") { +APPLICATION_TITLE }
+            }
         }
-        main {
+        main("p-2") {
             this.body()
         }
         script(src = "/modules/bootstrap/js/bootstrap.bundle.min.js") {}
