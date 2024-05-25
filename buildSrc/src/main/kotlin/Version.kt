@@ -69,7 +69,7 @@ object Version {
          *
          * `SPDX-License-Identifier: BSD-2`
          */
-        const val Exposed = "0.48.0"
+        const val Exposed = "0.50.1"
 
         /**
          * The version of the `htmx` package.
