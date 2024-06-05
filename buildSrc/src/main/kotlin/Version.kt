@@ -53,7 +53,7 @@ object Version {
         /**
          * The version of the `org.jetbrains.exposed` package.
          *
-         * `SPDX-License-Identifier: BSD-2`
+         * `SPDX-License-Identifier: Apache-2.0`
          */
         const val Exposed = "0.50.1"
 
