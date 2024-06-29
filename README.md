@@ -12,6 +12,9 @@ Java 17
 PostgreSQL
 : The database to store the data.
 
+## Documentation
+- [Database](docs/database.md) &ndash; creating and managing the database
+
 ## License
 Copyright (C) 2023-2024 Reece H. Dunn
 
