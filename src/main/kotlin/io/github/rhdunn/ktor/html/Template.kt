@@ -10,7 +10,7 @@ import org.jetbrains.exposed.sql.transactions.experimental.newSuspendedTransacti
 const val APPLICATION_TITLE = "Ktor Template"
 
 suspend fun ApplicationCall.respondHtmlTemplate(
-    classes: String? = "p-2",
+    classes: String? = "m-2",
     body: suspend MAIN.() -> Unit
 ) = respondHtml {
     head {
