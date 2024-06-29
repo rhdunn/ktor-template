@@ -20,7 +20,10 @@ fun Application.module() {
 
     routing {
         get("/") { index() }
+
         staticResources("/css", "assets.css")
+        staticResources("/js", "assets.js")
+
         swaggerUI(path = "swagger", swaggerFile = "openapi/documentation.yaml")
     }
 }

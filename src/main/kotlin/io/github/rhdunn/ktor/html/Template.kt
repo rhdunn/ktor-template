@@ -19,6 +19,7 @@ suspend fun ApplicationCall.respondHtmlTemplate(
         link(rel = "stylesheet", href = "/modules/bootstrap/css/bootstrap.min.css")
         link(rel = "stylesheet", href = "/modules/bootstrap-icons/font/bootstrap-icons.min.css")
         script(src = "/modules/htmx.org/htmx.min.js") {}
+        script(src = "/js/application.js") {}
     }
     body {
         nav("navbar navbar-expand-lg bg-body-tertiary") {
