@@ -10,7 +10,7 @@ fun HtmlBlockTag.sidebar(content: UL.() -> Unit) = div("d-flex flex-column p-3 b
 }
 
 fun UL.sidebarItem(href: String, active: Boolean = false, content: A.() -> Unit) = li("nav-item") {
-    a(classes = "nav-link ${if (active) "active" else "link-dark"}") {
+    a(classes = "nav-link ${if (active) "active" else ""}") {
         this.href = href
         if (active) attributes["aria-current"] = "page"
         content()
