@@ -56,4 +56,8 @@ dependencies {
 
     testImplementation("io.ktor:ktor-server-tests-jvm")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:${Version.Dependency.KotlinTest}")
+
+    constraints {
+        implementation("commons-codec:commons-codec:1.13")
+    }
 }
