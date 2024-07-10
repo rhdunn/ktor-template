@@ -9,6 +9,7 @@ fun HtmlBlockTag.sidebar(content: UL.() -> Unit) = div("d-flex flex-column p-3 b
     }
 }
 
+@Suppress("unused")
 fun UL.sidebarItem(href: String, active: Boolean = false, content: A.() -> Unit) = li("nav-item") {
     a(classes = "nav-link ${if (active) "active" else ""}") {
         this.href = href
@@ -17,4 +18,5 @@ fun UL.sidebarItem(href: String, active: Boolean = false, content: A.() -> Unit)
     }
 }
 
+@Suppress("unused")
 fun A.sidebarIcon(icon: String) = span("bi bi-$icon me-2") {}

@@ -14,6 +14,7 @@ private class InMemoryConnection(connection: Connection) : Connection by connect
     override fun close() {}
 }
 
+@Suppress("unused")
 interface TestDbTransaction {
     val tables: Array<Table>
 

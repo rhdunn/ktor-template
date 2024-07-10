@@ -6,11 +6,12 @@ import io.ktor.server.plugins.*
 import io.ktor.util.converters.*
 import io.ktor.util.reflect.*
 
-@Suppress("NOTHING_TO_INLINE")
+@Suppress("NOTHING_TO_INLINE", "unused")
 inline fun Parameters.getOrNull(name: String): String? {
     return get(name)?.takeIf { it.isNotEmpty() }
 }
 
+@Suppress("unused")
 inline fun <reified R : Any> Parameters.getOrNull(name: String): R? {
     return getOrNullImpl(name, typeInfo<R>())
 }

@@ -4,6 +4,7 @@ package io.github.rhdunn.ktor.html
 import io.ktor.server.application.*
 import kotlinx.html.*
 
+@Suppress("unused")
 inline fun FlowOrInteractiveOrPhrasingContent.dialogButton(
     classes: String? = null,
     href: String,
@@ -17,6 +18,7 @@ inline fun FlowOrInteractiveOrPhrasingContent.dialogButton(
     block()
 }
 
+@Suppress("unused")
 suspend fun ApplicationCall.respondModalDialog(
     classes: String? = null,
     block: DIV.() -> Unit,

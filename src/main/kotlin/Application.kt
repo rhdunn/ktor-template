@@ -11,6 +11,7 @@ import io.ktor.util.pipeline.*
 import kotlinx.html.*
 import org.jetbrains.exposed.sql.Database
 
+@Suppress("unused")
 fun Application.module() {
     Database.connect(dataSource)
 

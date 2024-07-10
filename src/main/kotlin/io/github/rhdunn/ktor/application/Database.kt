@@ -16,7 +16,6 @@ val ApplicationEnvironment.databaseUsername: String?
 val ApplicationEnvironment.databasePassword: String?
     get() = config.propertyOrNull("database.password")?.getString()
 
-@Suppress("unused")
 val Application.dataSource: DataSource
     get() {
         val source = PGSimpleDataSource()

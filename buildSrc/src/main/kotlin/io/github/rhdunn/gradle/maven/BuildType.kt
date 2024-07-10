@@ -6,6 +6,7 @@ package io.github.rhdunn.gradle.maven
  *
  * @param suffix The suffix applied to the version tag.
  */
+@Suppress("unused")
 enum class BuildType(val suffix: String) {
     /**
      * A release build.

@@ -14,11 +14,13 @@ class TestApplicationCall : ApplicationCall {
     override lateinit var attributes: Attributes
     override lateinit var parameters: Parameters
 
+    @Suppress("unused")
     fun parameters(builder: ParametersBuilder.() -> Unit) {
         parameters = ParametersBuilder().apply(builder).build()
     }
 }
 
+@Suppress("unused")
 fun testApplicationCall(builder: TestApplicationCall.() -> Unit): ApplicationCall {
     return TestApplicationCall().apply(builder)
 }
