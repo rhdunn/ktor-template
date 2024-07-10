@@ -25,7 +25,7 @@ object Version {
          *
          * @see <a href="https://github.com/ktorio/ktor">https://github.com/ktorio/ktor</a>
          */
-        const val Ktor = "2.3.6"
+        const val Ktor = "2.3.12"
 
         /**
          * The version of the `kotlin("jvm")` plugin.
