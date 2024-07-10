@@ -9,7 +9,7 @@ import kotlin.reflect.KClass
  * @see <a href="https://youtrack.jetbrains.com/issue/EXPOSED-388">EXPOSED-388</a>
  * @author Oleg Babichev
  */
-@Suppress("unused")
+@Suppress("unused", "MemberVisibilityCanBePrivate")
 abstract class ProxyColumnType<T, S>(
     val delegate: ColumnType<S>,
     val klass: KClass<*>

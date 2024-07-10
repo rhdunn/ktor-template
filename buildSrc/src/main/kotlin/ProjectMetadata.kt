@@ -5,7 +5,7 @@ import io.github.rhdunn.gradle.maven.BuildType
 /**
  * Information about the project.
  */
-@Suppress("ConstPropertyName")
+@Suppress("ConstPropertyName", "MemberVisibilityCanBePrivate")
 object ProjectMetadata {
     /**
      * Version information about the current build of the project.
