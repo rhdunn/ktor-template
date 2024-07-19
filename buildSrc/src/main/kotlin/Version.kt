@@ -111,6 +111,6 @@ object Version {
          *
          * `SPDX-License-Identifier: Apache-2.0`
          */
-        const val SwaggerUI = "5.10.3"
+        const val SwaggerUI = "5.17.14"
     }
 }
