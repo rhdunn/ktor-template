@@ -37,6 +37,7 @@ suspend fun ApplicationCall.swaggerUI(apiUrl: String) = respondHtml {
                     window.ui = SwaggerUIBundle({
                         url: '${request.path()}/$apiUrl',
                         dom_id: '#swagger-ui',
+                        validatorUrl: 'none',
                         presets: [
                         SwaggerUIBundle.presets.apis,
                         SwaggerUIStandalonePreset
