@@ -40,6 +40,8 @@ dependencies {
 
     implementation("ch.qos.logback:logback-classic:${Version.Dependency.LogbackClassic}")
 
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:${Version.Dependency.KotlinSerialization}")
+
     implementation("org.webjars:bootstrap:${Version.Dependency.Bootstrap}")
     implementation("org.webjars.npm:bootstrap-icons:${Version.Dependency.BootstrapIcons}")
 

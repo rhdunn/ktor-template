@@ -86,6 +86,13 @@ object Version {
         const val KotlinTest = Kotlin
 
         /**
+         * The version of the `org.jetbrains.kotlinx:kotlinx-serialization` dependency.
+         *
+         * `SPDX-License-Identifier: Apache-2.0`
+         */
+        const val KotlinSerialization = "1.7.1"
+
+        /**
          * The version of the `com.h2database:h2` package.
          *
          * `SPDX-License-Identifier: BSD-2`
