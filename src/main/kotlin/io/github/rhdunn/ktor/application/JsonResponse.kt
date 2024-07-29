@@ -20,3 +20,19 @@ suspend fun ApplicationCall.respondJson(json: JsonObject, status: HttpStatusCode
 suspend fun ApplicationCall.respondJson(json: JsonArray, status: HttpStatusCode = HttpStatusCode.OK) {
     respondJson(json.toString(), status)
 }
+
+suspend fun ApplicationCall.respondJsonLd(json: String, status: HttpStatusCode = HttpStatusCode.OK) {
+    respondText(json, contentType = JsonLd, status = status)
+}
+
+@Suppress("unused")
+suspend fun ApplicationCall.respondJsonLd(json: JsonObject, status: HttpStatusCode = HttpStatusCode.OK) {
+    respondJsonLd(json.toString(), status)
+}
+
+@Suppress("unused")
+suspend fun ApplicationCall.respondJsonLd(json: JsonArray, status: HttpStatusCode = HttpStatusCode.OK) {
+    respondJsonLd(json.toString(), status)
+}
+
+private val JsonLd = ContentType.parse("application/ld+json")
