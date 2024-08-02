@@ -97,7 +97,7 @@ object Version {
          *
          * `SPDX-License-Identifier: BSD-2`
          */
-        const val H2JdbcDriver = "2.2.224"
+        const val H2JdbcDriver = "2.3.230"
 
         /**
          * The version of the `ch.qos.logback:logback-classic` dependency.
