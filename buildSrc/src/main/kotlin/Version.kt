@@ -43,7 +43,7 @@ object Version {
          *
          * @see <a href="https://github.com/flyway/flywy">https://github.com/flyway/flyway</a>
          */
-        const val Flyway = "10.10.0"
+        const val Flyway = "10.17.0"
     }
 
     /**
