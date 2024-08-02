@@ -76,7 +76,7 @@ object Version {
          *
          * `SPDX-License-Identifier: Apache-2.0`
          */
-        const val HTMX = "1.9.10"
+        const val HTMX = "2.0.1"
 
         /**
          * The version of the `org.jetbrains.kotlin:kotlin-test-junit` dependency.
