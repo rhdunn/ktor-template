@@ -12,7 +12,7 @@ object Version {
      *
      * @see <a href="https://github.com/JetBrains/kotlin">https://github.com/JetBrains/kotlin</a>
      */
-    const val Kotlin = "1.9.21"
+    const val Kotlin = "1.9.25"
 
     /**
      * Versions of the various plugins used by the project.
