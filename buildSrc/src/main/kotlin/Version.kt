@@ -69,7 +69,7 @@ object Version {
          *
          * `SPDX-License-Identifier: Apache-2.0`
          */
-        const val Exposed = "0.50.1"
+        const val Exposed = "0.53.0"
 
         /**
          * The version of the `htmx` package.
